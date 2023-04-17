@@ -8,8 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+        UITabBar.appearance().backgroundColor = .black
+        UITabBar.appearance().unselectedItemTintColor = .gray
+    }
     var body: some View {
-        Main()
+        TabView{
+            Situation().navigationBarBackButtonHidden(true)
+                .tabItem{
+                    Label("Durum", systemImage: "circle.circle")
+                }
+            Calls().navigationBarBackButtonHidden(true)
+                .tabItem{
+                    Label("Aramalar", systemImage: "phone")
+                }
+            Communities().navigationBarBackButtonHidden(true)
+                .tabItem{
+                    Label("Topluluklar", systemImage: "person.3")
+                }
+            Chats().navigationBarBackButtonHidden(true)
+                .tabItem{
+                    Label("Sohbetler", systemImage: "message")
+                }
+            Settings().navigationBarBackButtonHidden(true)
+                .tabItem{
+                    Label("Ayarlar", systemImage: "gear")
+                }
+        }
     }
 }
 

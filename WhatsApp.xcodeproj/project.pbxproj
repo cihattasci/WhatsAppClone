@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B3466FB29ED971100EDDC5B /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3466FA29ED971100EDDC5B /* Main.swift */; };
 		9B3466FD29ED973E00EDDC5B /* Situation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3466FC29ED973E00EDDC5B /* Situation.swift */; };
 		9B3466FF29ED974E00EDDC5B /* Calls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3466FE29ED974E00EDDC5B /* Calls.swift */; };
 		9B34670129ED975A00EDDC5B /* Communities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B34670029ED975A00EDDC5B /* Communities.swift */; };
@@ -40,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9B3466FA29ED971100EDDC5B /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		9B3466FC29ED973E00EDDC5B /* Situation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Situation.swift; sourceTree = "<group>"; };
 		9B3466FE29ED974E00EDDC5B /* Calls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calls.swift; sourceTree = "<group>"; };
 		9B34670029ED975A00EDDC5B /* Communities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communities.swift; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 		9B3466F929ED96E800EDDC5B /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				9B3466FA29ED971100EDDC5B /* Main.swift */,
 				9B3466FC29ED973E00EDDC5B /* Situation.swift */,
 				9B3466FE29ED974E00EDDC5B /* Calls.swift */,
 				9B34670029ED975A00EDDC5B /* Communities.swift */,
@@ -287,7 +284,6 @@
 				9B34670129ED975A00EDDC5B /* Communities.swift in Sources */,
 				9B34670529ED976F00EDDC5B /* Settings.swift in Sources */,
 				9B34670329ED976400EDDC5B /* Chats.swift in Sources */,
-				9B3466FB29ED971100EDDC5B /* Main.swift in Sources */,
 				9BA4E6A629ED7A8700E611E2 /* ContentView.swift in Sources */,
 				9B3466FD29ED973E00EDDC5B /* Situation.swift in Sources */,
 				9BA4E6A429ED7A8700E611E2 /* WhatsAppApp.swift in Sources */,
