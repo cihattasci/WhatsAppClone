@@ -34,7 +34,7 @@ struct ContentView: View {
                 .tabItem{
                     Label("Ayarlar", systemImage: "gear")
                 }
-        }
+        }.tint(.blue)
     }
 }
 
