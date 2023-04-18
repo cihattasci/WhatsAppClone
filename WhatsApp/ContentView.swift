@@ -7,6 +7,23 @@
 
 import SwiftUI
 
+extension Font {
+    static let topRow = Font.custom("", size: 18).bold()
+    static let bottomRow = Font.custom("", size: 12).bold()
+}
+
+extension Color {
+    init(hex: UInt, alpha: Double = 1) {
+        self.init(
+            .sRGB,
+            red: Double((hex >> 16) & 0xff) / 255,
+            green: Double((hex >> 08) & 0xff) / 255,
+            blue: Double((hex >> 00) & 0xff) / 255,
+            opacity: alpha
+        )
+    }
+}
+
 struct ContentView: View {
     init() {
         UITabBar.appearance().backgroundColor = .black

@@ -9,7 +9,30 @@ import SwiftUI
 
 struct Situation: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack{
+                List{
+                    SituationAddRow()
+                }.listStyle(.grouped)
+                
+                Form {
+                    Section(header: Text("SON GÜNCELLEMELER")) {
+                        ForEach(0..<5) { index in
+                            SituationAddRow()
+                        }
+                    }
+                }
+            }
+            
+            .navigationTitle("Durum")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Gizlilik") {
+                        print("Gizlilik")
+                    }
+                }
+            }
+        }
     }
 }
 
