@@ -8,22 +8,21 @@
 import SwiftUI
 
 struct Situation: View {
+    
+    @State private var search: String = ""
+    
     var body: some View {
         NavigationView {
             VStack{
                 List{
                     SituationAddRow()
-                }.listStyle(.grouped)
-                
-                Form {
-                    Section(header: Text("SON GÜNCELLEMELER")) {
-                        ForEach(0..<5) { index in
-                            SituationAddRow()
-                        }
-                    }
-                }
+                }.listStyle(.automatic).listRowSeparator(.automatic)
+                Text("SON GÜNCELLEMELER").font(.footnote)
+                Spacer()
             }
-            
+            .searchable(text: $search, prompt: "Arayın").onChange(of: search, perform: { newValue in
+                if newValue.isEmpty{}
+            })
             .navigationTitle("Durum")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {

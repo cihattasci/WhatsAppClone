@@ -23,9 +23,8 @@ struct SituationAddRow: View {
                 ZStack{
                     Image(systemName: "pencil").resizable().frame(width: 13, height: 12).foregroundColor(.blue).zIndex(1)
                 }.frame(width: 30, height: 30).background(Color(.darkGray)).cornerRadius(15)
-            }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+            }
         }
-        .background(Color(hex: 0x606060))
     }
 }
 
@@ -35,11 +34,10 @@ struct AvatarView: View {
     var body: some View {
         image
             .resizable()
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .aspectRatio(contentMode: .fit)
             .frame(width: size, height: size)
             .cornerRadius(size / 2)
-            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
     }
 }
 
