@@ -16,11 +16,20 @@ struct Situation: View {
             VStack{
                 List{
                     SituationAddRow()
-                }.listStyle(.automatic).listRowSeparator(.automatic)
-                Text("SON GÜNCELLEMELER").font(.footnote)
-                Spacer()
+                    Section(header:Text("SON GÜNCELLEMELER")){
+                        SituationRow(name: "Annem", date: Date.now)
+                        SituationRow(name: "Ablam", date: Date.now)
+                        SituationRow(name: "Abim", date: Date.now)
+                        SituationRow(name: "Yengem", date: Date.now)
+                    }
+                    
+                    Section(header:Text("GÖRÜLEN GÜNCELLEMELER"), footer: Text("Durum güncellemeleriniz uçtan uca şifrelidir").padding(15)){
+                        SituationRow(name: "Babam", date: Date.now)
+                    }
+                }.listStyle(.insetGrouped)
             }
-            .searchable(text: $search, prompt: "Arayın").onChange(of: search, perform: { newValue in
+            .searchable(text: $search, prompt: "Ara")
+            .onChange(of: search, perform: { newValue in
                 if newValue.isEmpty{}
             })
             .navigationTitle("Durum")

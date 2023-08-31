@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Font {
-    static let topRow = Font.custom("", size: 18).bold()
+    static let topRow = Font.custom("", size: 16).bold()
     static let bottomRow = Font.custom("", size: 12).bold()
 }
 
@@ -26,7 +26,6 @@ extension Color {
 
 struct ContentView: View {
     init() {
-        UITabBar.appearance().backgroundColor = .black
         UITabBar.appearance().unselectedItemTintColor = .gray
     }
     
