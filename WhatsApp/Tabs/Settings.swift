@@ -15,12 +15,13 @@ struct Settings: View {
             VStack{
                 List{
                     HStack{
+                        Spacer()
                         Button {} label: {
                             VStack{
                                 Image(systemName: "person.crop.circle.fill").font(.title2)
                                 Text("Profil").padding(.top, 1).font(.caption)
                             }
-                            .padding(.horizontal, 30)
+                            .padding(.horizontal, 28)
                             .padding(.vertical, 10)
                             .background(Color.gray)
                             .cornerRadius(10)
@@ -30,7 +31,7 @@ struct Settings: View {
                                 Image(systemName: "lock.fill").font(.title2)
                                 Text("Gizlilik").padding(.top, 1).font(.caption)
                             }
-                            .padding(.horizontal, 30)
+                            .padding(.horizontal, 28)
                             .padding(.vertical, 10)
                             .background(Color.gray)
                             .cornerRadius(10)
@@ -40,11 +41,12 @@ struct Settings: View {
                                 Image(systemName: "person.text.rectangle.fill").font(.title2)
                                 Text("Kişiler").padding(.top, 1).font(.caption)
                             }
-                            .padding(.horizontal, 30)
+                            .padding(.horizontal, 28)
                             .padding(.vertical, 10)
                             .background(Color.gray)
                             .cornerRadius(10)
                         }
+                        Spacer()
                     }
                     Section{
                         SettingsItemRow(icon: "star.square.fill",color: Color.yellow, name: "Yıldızlı Mesajlar", toNavigate: "")
