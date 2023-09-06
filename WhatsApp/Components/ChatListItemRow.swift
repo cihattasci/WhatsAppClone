@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChatListItemRow: View {
-    let constant: Bool?
+    let pinned: Bool?
     let name: String
     let message: String
     let date: Date
@@ -25,8 +25,8 @@ struct ChatListItemRow: View {
             Spacer()
             VStack{
                 Text(date, format: .dateTime.hour().minute()).font(.topRow).foregroundColor(.gray)
-                if constant != false {
-                    Image(systemName: "syringe.fill").resizable().foregroundColor(.gray).frame(width: 20, height: 20)
+                if pinned != false {
+                    Image(systemName: "pin.fill").foregroundColor(.gray)
                 }
             }
         }
@@ -35,6 +35,6 @@ struct ChatListItemRow: View {
 
 struct ChatListItemRow_Previews: PreviewProvider {
     static var previews: some View {
-        ChatListItemRow(constant: false, name: "Annem", message: "Annem", date: Date.now)
+        ChatListItemRow(pinned: false, name: "Annem", message: "Annem", date: Date.now)
     }
 }

@@ -15,6 +15,7 @@
 		9B5CDE262A9B778400062562 /* CallsItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5CDE252A9B778400062562 /* CallsItemRow.swift */; };
 		9B5CDE282A9B81F300062562 /* CreateCallRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5CDE272A9B81F300062562 /* CreateCallRow.swift */; };
 		9B811E142A9DB68300F4AA6D /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B811E132A9DB68300F4AA6D /* CameraScreen.swift */; };
+		9B9507922AA06BC7001D6594 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9507912AA06BC7001D6594 /* ChatScreen.swift */; };
 		9BA4E6A429ED7A8700E611E2 /* WhatsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA4E6A329ED7A8700E611E2 /* WhatsAppApp.swift */; };
 		9BA4E6A629ED7A8700E611E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA4E6A529ED7A8700E611E2 /* ContentView.swift */; };
 		9BA4E6A829ED7A8700E611E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA4E6A729ED7A8700E611E2 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		9B5CDE252A9B778400062562 /* CallsItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsItemRow.swift; sourceTree = "<group>"; };
 		9B5CDE272A9B81F300062562 /* CreateCallRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCallRow.swift; sourceTree = "<group>"; };
 		9B811E132A9DB68300F4AA6D /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
+		9B9507912AA06BC7001D6594 /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		9BA4E6A029ED7A8700E611E2 /* WhatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA4E6A329ED7A8700E611E2 /* WhatsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppApp.swift; sourceTree = "<group>"; };
 		9BA4E6A529ED7A8700E611E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				9B811E132A9DB68300F4AA6D /* CameraScreen.swift */,
+				9B9507912AA06BC7001D6594 /* ChatScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B5CDE282A9B81F300062562 /* CreateCallRow.swift in Sources */,
+				9B9507922AA06BC7001D6594 /* ChatScreen.swift in Sources */,
 				9B3466FF29ED974E00EDDC5B /* Calls.swift in Sources */,
 				9B811E142A9DB68300F4AA6D /* CameraScreen.swift in Sources */,
 				9BDB964C29EE9C57007FF4D2 /* SituationAddRow.swift in Sources */,

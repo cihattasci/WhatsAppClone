@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Chat: Hashable{
-    let constant: Bool?
+    var constant: Bool?
     let name: String
     let message: String
     let date: Date
@@ -21,21 +21,46 @@ struct Chats: View {
         Chat(constant: false, name: "Babam", message: "Gittim", date: Date.now),
         Chat(constant: false, name: "Abim", message: "Durdum", date: Date.now),
         Chat(constant: false, name: "Ablam", message: "Yoruldum", date: Date.now),
-        Chat(constant: false, name: "Annem", message: "Geldim", date: Date.now),
-        Chat(constant: false, name: "Babam", message: "Gittim", date: Date.now),
-        Chat(constant: false, name: "Abim", message: "Durdum", date: Date.now),
-        Chat(constant: false, name: "Ablam", message: "Yoruldum", date: Date.now),
-        Chat(constant: false, name: "Annem", message: "Geldim", date: Date.now),
-        Chat(constant: false, name: "Babam", message: "Gittim", date: Date.now),
-        Chat(constant: false, name: "Abim", message: "Durdum", date: Date.now),
-        Chat(constant: false, name: "Ablam", message: "Yoruldum", date: Date.now),
     ]
     var body: some View {
         NavigationView {
             VStack{
                 List{
-                    ForEach(chats, id: \.self) { chat in
-                        ChatListItemRow(constant: chat.constant, name: chat.name, message: chat.message, date: chat.date)
+                    ForEach(chats.indices, id: \.self) { i in
+                        NavigationLink {
+                            ChatScreen(name: chats[i].name)
+                        } label: {
+                            ChatListItemRow(pinned: chats[i].constant, name: chats[i].name, message: chats[i].message, date: chats[i].date)
+                        }
+                        .swipeActions(edge: .trailing) {
+                            //right side
+                            Button {
+                                print("Arşivle")
+                            } label: {
+                                Image(systemName: "archivebox.fill")
+                            }.tint(.blue)
+                            Button {
+                                print("Diğer")
+                            } label: {
+                                Image(systemName: "ellipsis")
+                            }.tint(.gray)
+                        }
+                        .swipeActions(edge: .leading) {
+                            //left side
+                            Button {
+                                print("okunmadı")
+                            } label: {
+                                Image(systemName: "quote.bubble.fill")
+                            }.tint(.blue)
+                            Button {
+                                withAnimation {
+                                    chats[i].constant?.toggle()
+                                    chats.swapAt(0, i)
+                                }
+                            } label: {
+                                Image(systemName: chats[i].constant == true ? "pin.slash.fill" : "pin.fill")
+                            }.tint(.gray)
+                        }
                     }
                 }.listStyle(.plain)
             }

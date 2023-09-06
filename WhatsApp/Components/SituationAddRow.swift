@@ -18,18 +18,6 @@ struct SituationAddRow: View {
             }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
             Spacer()
             HStack{
-                NavigationStack(path: $path) {
-                            Button {
-                                path.append("NewView")
-                            } label: {
-                                Text("Show NewView")
-                            }
-                            .navigationDestination(for: String.self) { view in
-                                if view == "NewView" {
-                                    Text("This is NewView")
-                                }
-                            }
-                        }
                 ZStack{
                     Image(systemName: "camera.fill").resizable().frame(width: 17, height: 13).foregroundColor(.blue).zIndex(1)
                 }.frame(width: 30, height: 30).cornerRadius(15)
